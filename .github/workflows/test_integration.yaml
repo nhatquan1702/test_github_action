@@ -10,7 +10,7 @@ jobs:
     runs-on: macos-latest
     strategy:
       matrix:
-        api-level: [30]
+        api-level: [29]
         target: [google_apis]
     steps:
       - uses: actions/checkout@v3
@@ -25,8 +25,8 @@ jobs:
         with:
           target: ${{ matrix.target }}
           api-level: ${{ matrix.api-level }}
-          arch: x86
-          profile: Pixel 4 API 30
+          arch: x86_64
+          profile: Nexus 6
           script: flutter test integration_test/increment_success_test.dart
 #  android:
 #    runs-on: macos-13
