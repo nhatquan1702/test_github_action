@@ -11,10 +11,10 @@ jobs:
     strategy:
       matrix:
         api-level: [29]
-        target: [google_apis]
+        target: [default]
     steps:
-      - uses: actions/checkout@v3
-      - uses: subosito/flutter-action@v2
+      - uses: actions/checkout@v2
+      - uses: subosito/flutter-action@v1
         with:
           flutter-version: '3.3.8'
           channel: 'stable'
@@ -23,7 +23,7 @@ jobs:
       - name: Run Flutter tests
         uses: reactivecircus/android-emulator-runner@v2
         env:
-          ANDROID_EMULATOR_WAIT_TIME_BEFORE_KILL: 420
+          ANDROID_EMULATOR_WAIT_TIME_BEFORE_KILL: 3600
         with:
           target: ${{ matrix.target }}
           api-level: ${{ matrix.api-level }}
