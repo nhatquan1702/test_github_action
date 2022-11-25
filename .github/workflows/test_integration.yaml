@@ -11,7 +11,7 @@ jobs:
     strategy:
       matrix:
         api-level: [30]
-        target: [default, google_apis]
+        target: [google_apis]
     steps:
       - uses: actions/checkout@v3
       - uses: subosito/flutter-action@v2
