@@ -37,8 +37,8 @@ jobs:
           # you can add more API level if you want to run your tests on different API
       fail-fast: true
     steps:
-      - uses: actions/checkout@v3
-      - uses: subosito/flutter-action@v2
+      - uses: actions/checkout@v2
+      - uses: subosito/flutter-action@v1
         with:
           channel: stable
           # instead of "channel: stable", you could be more precise by specifying the exact version of Flutter you're using:
