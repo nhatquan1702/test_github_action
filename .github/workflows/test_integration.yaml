@@ -23,7 +23,7 @@ jobs:
       - name: Run Flutter tests
         uses: reactivecircus/android-emulator-runner@v2
         env:
-          ANDROID_EMULATOR_WAIT_TIME_BEFORE_KILL: 120
+          ANDROID_EMULATOR_WAIT_TIME_BEFORE_KILL: 420
         with:
           target: ${{ matrix.target }}
           api-level: ${{ matrix.api-level }}
